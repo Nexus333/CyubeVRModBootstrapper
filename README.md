@@ -1,4 +1,7 @@
 # SatisfactoryModBootstrapper
+
+Zydis Dependecy: https://github.com/zyantific/zydis
+
 xinput1_3.dll hook for Satisfactory to load other modules and resolve their symbols in runtime via PDB.
 
 It will load all modules in the directory "loaders" located in the game's root directory, resolve all
