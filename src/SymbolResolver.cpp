@@ -29,7 +29,7 @@ SymbolResolver::SymbolResolver(HMODULE gameModuleHandle, HMODULE diaDllHandle, b
     (*dataSource).loadDataForExe(executablePath.c_str(), nullptr, nullptr);
     CHECK_FAILED(hr, "Failed to load DIA data from executable file: ");
     hr = (*dataSource).openSession(&diaSession);
-    CHECK_FAILED(hr, "Failed to open DIA session: ");
+    CHECK_FAILED(hr, "Failed to open DIA session: "); //will fail if PDB is not present.
     //because HMODULE value is the same as the DLL load base address, according to the MS documentation
     hr = (*diaSession).put_loadAddress(reinterpret_cast<ULONGLONG>(gameModuleHandle));
     CHECK_FAILED(hr, "Failed to update DLL load address on IDiaSession: ");

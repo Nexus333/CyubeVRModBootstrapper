@@ -1,0 +1,2 @@
+[submodule "zydis"]
+	url = https://github.com/zyantific/zydis.git

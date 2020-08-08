@@ -13,7 +13,7 @@
 
 using namespace std::filesystem;
 
-#define GAME_MODULE_NAME "FactoryGame-Win64-Shipping.exe"
+#define GAME_MODULE_NAME "cyubeVR-Win64-Shipping.exe"
 
 static DllLoader* dllLoader;
 
@@ -174,7 +174,7 @@ std::filesystem::path resolveGameRootDir() {
     std::string gameFolderName(GAME_MODULE_NAME);
     gameFolderName.erase(gameFolderName.find('-'));
     //we go up the directory tree until we find the folder called
-    //FactoryGame, which denotes the root of the game directory
+    //cyubeVR, which denotes the root of the game directory
     while (!std::filesystem::exists(rootDirPath / gameFolderName)) {
         rootDirPath = rootDirPath.parent_path();
     }
